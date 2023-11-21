@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProfileCard = () => {
+const ProfileCard = ({ data }) => {
   return <div></div>;
 };
 
