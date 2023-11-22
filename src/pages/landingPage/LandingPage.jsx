@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProfileCard from '../../components/profileCard/ProfileCard';
 import Nav from '../../components/nav/Nav';
+import Loading from '../../components/loading/Loading';
 
 import axios from 'axios';
 
@@ -24,7 +25,7 @@ const LandingPage = () => {
   return (
     <div className='flex flex-col justify-center items-center m-[11%]'>
       <Nav />
-      <div>{data ? <ProfileCard data={data} /> : null}</div>
+      <div>{data ? <ProfileCard data={data} /> : <Loading />}</div>
     </div>
   );
 };
