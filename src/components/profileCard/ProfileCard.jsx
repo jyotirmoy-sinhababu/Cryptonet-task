@@ -10,8 +10,8 @@ const ProfileCard = ({ data }) => {
           <img className='rounded-full' src={data.picture.large} alt='' />
         </div>
         <div className='flex gap-[3px]'>
-          <p className='font-bold text-xl'>{data.name.title}</p>
-          <p className='font-bold text-xl'>
+          <p className='font-bold text-xl font-barlow'>{data.name.title}</p>
+          <p className='font-bold text-xl font-barlow'>
             {data.name.first}
             {data.name.last}
           </p>
@@ -19,19 +19,19 @@ const ProfileCard = ({ data }) => {
       </div>
 
       <div className='flex flex-col gap-[6px]'>
-        <p>
+        <p className='font-barlow'>
           <strong>Country:</strong>
           {data.location.country}
         </p>
-        <p>
+        <p className='font-barlow'>
           <strong>State:</strong>
           {data.location.state}
         </p>
-        <p>
+        <p className='font-barlow'>
           <strong>City:</strong>
           {data.location.city}
         </p>
-        <p>
+        <p className='font-barlow'>
           <strong>Sex:</strong>
           {data.gender}
         </p>
