@@ -4,10 +4,10 @@ import LandingPage from './pages/landingPage/LandingPage';
 
 function App() {
   return (
-    <>
+    <div className=''>
       <Nav />
       <LandingPage />
-    </>
+    </div>
   );
 }
 

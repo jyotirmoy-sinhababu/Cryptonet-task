@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const LandingPage = () => {
   const [data, setData] = useState();
+  console.log(data);
 
   useEffect(() => {
     fetchData();
@@ -15,13 +16,13 @@ const LandingPage = () => {
       .get('https://randomuser.me/api/?page=1&results=1&seed=abc ')
       .then((res) => {
         console.log(res.data.results[0]);
-        setData(res.data.results);
+        setData(res.data.results[0]);
       });
   };
 
   return (
-    <div>
-      <ProfileCard data={data} />
+    <div className='flex justify-center items-center'>
+      {data ? <ProfileCard data={data} /> : null}
     </div>
   );
 };
